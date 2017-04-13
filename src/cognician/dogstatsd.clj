@@ -116,9 +116,9 @@
 
 
 (defmacro measure! [metric opts & body]
-  `(let [t0#  (System/currentTimeMillis)
+  `(let [t0#  (System/nanoTime)
          res# (do ~@body)]
-     (histogram! ~metric (- (System/currentTimeMillis) t0#) ~opts)
+     (histogram! ~metric (/ (- (System/nanoTime) t0#) 1000000.0) ~opts)
      res#))
 
 
