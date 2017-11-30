@@ -5,7 +5,7 @@
 Add to project.clj:
 
 ```clj
-[cognician/dogstatsd-clj "0.1.1"]
+[cognician/dogstatsd-clj "0.1.2"]
 ```
 
 Require it:
